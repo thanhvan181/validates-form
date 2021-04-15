@@ -9,6 +9,8 @@ const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const submit = document.getElementById('btn-submit');
 
+console.log("start event")
+console.log(phone)
 username.addEventListener('blur', validateUser);
 password.addEventListener('blur', validatePassword);
 resetpassword.addEventListener('blur', validateResetPassword);
@@ -34,28 +36,28 @@ function showData(e) {
 function getDataForm() {
 	let info = '';
 	// console.log(JSON.stringify());
-	let validators = [validateUser, validatePassword, validateResetPassword, validateFullName, validateName, validatePhone,validateEmail,validateDate];
+	let validators = [validateUser, validatePassword, validateResetPassword, validateFullname, validateName, validateEmail, validateDate, validatePhone];
 	let result = validators.every(function (validator) {
 		return validator()
 	})
 	console.log("Check All ", result)
 	if (result) {
          info = `
-        <h1>Ban da dang ky thanh cong</h1>
-        <p>${user.name}: ${user.value}</p>
-        
-
+        Ban da dang ky thanh cong !
+        ==============================
+        Ten Dang Nhap: ${user.value}
+        Mat Khau: ${password.value}
+        Ten: ${ten.value}
+        Ho va Ten Lot: ${fullname.value}
+        Ngay Sinh: ${date.value}
+        Email: ${email.value}
+        Phone: ${phone.value}
+        ==============================
         `
 		
 	}
 	return info;
 }
-
-
-
-
-
-
 
 function validateUser(){
     const re = /^[a-z0-9_-]{3,16}$/igm;
@@ -124,8 +126,8 @@ function validateFullname(){
 
 
 function validateDate(){
-    const re = /^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4}$/g;
-
+    const re = /^\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}$/g;
+	console.log("DATE", date.value)
     if(!re.test(date.value)){
         setErrorFor(date, 'ngay thang nam sinh khong dung');
         return false;
@@ -146,6 +148,7 @@ function validateEmail(e) {
 	}
 }
 function validatePhone(e) {
+    console.log("Run validate Phone")
 	const re = /(84|0[3|5|7|8|9])+([0-9]{8})\b/igm;
 	if (!re.test(phone.value)) {
 		setErrorFor(phone, "Phone invalid !")
@@ -157,15 +160,13 @@ function validatePhone(e) {
 
 }
 
-
-
-
-
 function setErrorFor(input, message){
     const formControl = input.parentElement;
+    console.log("Input", input)
+	console.log(formControl)
     const small = formControl.querySelector('small');
     formControl.className = 'form-control error';
-    small.innnerText = message;
+    small.innerText = message;
 
 }
 function setSuccessFor(input) {
