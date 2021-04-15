@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+  
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="header-top">
+                <img src="./banner1.png" alt="">
+            </div>
+            <div id="header-main">
+
+                <div id="tuyensinh">
+                    <div id="list">
+                        <ul>
+                            <h3><a href="main.html">Tuyển sinh</a></h3>
+
+                            <h4><a href="">Chương trình đào tạo</a></h4>
+                            <h4><a href="">Hoạt động sinh viên</a></h4>
+                            <h4><a href="">Doanh nghiệp tuyền dụng</a></h4>
+
+
+                        </ul>
+
+
+
+                    </div>
+                </div>
+
+
+                <div id="main">
+
+                    <div id="menu">
+                        <ul>
+                            <img src="https://caodang.fpt.edu.vn/wp-content/uploads/logo-3.png" alt=""
+                                style="max-width: 80px;">
+
+                            <li><a href="main.html">Tuyển sinh </a> </li>
+                            <li><a href="index.html"> Tin tức </a> </li>
+                            <li><a href="https://www.youtube.com/watch?v=9HPZAkC-I4I&list=RDMM9HPZAkC-I4I&start_radio=1"
+                                    target="_blank"> Thể thao </a> </li>
+                            <li><a href="https://www.youtube.com/watch?v=9HPZAkC-I4I&list=RDMM9HPZAkC-I4I&start_radio=1"
+                                    target="_blank"> Văn hóa </a> </li>
+                            <li><a href="https://www.youtube.com/watch?v=9HPZAkC-I4I&list=RDMM9HPZAkC-I4I&start_radio=1"
+                                    target="_blank"> Thể thao </a> </li>
+                        </ul>
+                    </div>
+                    <div class="JS">
+                        <div id="script1">
+
+                            <h1>Đăng kí tài khoản</h1>
+                            <h4>.::Thông tin cơ bản</h4>
+                            <p>Vui lòng nhập đầy đủ các thông tin bên dưới để tạo tài khoản mới, dấu (*) là bắt buộc</p>
+                            <form id = "form"  onsubmit="return KiemTra()">
+                                <div id="form-control">
+                                    <label for="user" >Ten Dang Nhap(*)</label>
+                                    <input type="text" name="user" id="user">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+                                    <label for="pass" >Mat Khau(*)</label>
+                                    <input type="password" name="password" id="password">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+                                    <label for="re-pass" > Nhap Lai Mat Khau(*)</label>
+                                    <input type="password" name="re-password" id="re-password">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+
+                                    <label for="name" >Ten(*)</label>
+                                    <input type="text" name="name" id="name">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+
+                                    <label for="user-name" >Ho va Ten Lot(*)</label>
+                                    <input type="text" name="user-name" id="user-name">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+
+                                    <label for="ngaysinh">Ngay Sinh(*)</label>
+                                    <input type="date" name="ngaysinh" id="date">
+                                    <small>Error message</small>
+                                </div>
+                                <br>
+                                <div id="form-control">
+
+                                    <label id="gmail" for="email">Email(*) </label>
+
+                                    <input type="email" name="email" id="email">
+                                    <small>Error message</small>
+                                </div>
+                                <div id="form-control">
+
+                                    <label id="phone" for="dienthoai"> Phone(*) </label>
+                                    <input type="text" name="dienthoai" id="phone">
+                                    <small>Error message</small>
+                                </div>
+
+
+                    
+
+                        <br>
+                        <br>
+
+                        <button id ="btn-submit">Dang Ky</button>
+
+                        </form>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+    </div>
+    </header>
+
+
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
