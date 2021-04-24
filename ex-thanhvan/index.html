@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>excercise 3</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+    </style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<div class="container">
+<form>
+    <div>
+    <input type="radio" id="student" name="option" value="student" checked>
+    <label for="student">Tên sinh viên</label><br>
+    </div>
+    <div>
+        <input type="radio" id="grade" name="option" value="grade">
+        <label for="grade">Điểm đạt</label><br>
+    </div>
+    <br>
+    <input type="text" id="search">
+</form>
+    <br>
+    <div>
+       <table id="table-content">
+          <tr>
+              <th>STT</th>
+              <th>Họ và tên</th>
+              <th>Điểm JS1</th>
+              <th>Điểm JS2</th>
+              <th>Điểm trung bình</th>
+          </tr>
+           <tr>
+               <td>1</td>
+               <td>Nguyen van vinh</td>
+               <td>8</td>
+               <td>9</td>
+               <td>8.5</td>
+           </tr>
+           <tr>
+               <td>2</td>
+               <td>Vu thi Hanh</td>
+               <td>7</td>
+               <td>7</td>
+               <td>7</td>
+           </tr>
+           <tr>
+               <td>3</td>
+               <td>Tran van binh</td>
+               <td>4</td>
+               <td>5</td>
+               <td>4.5</td>
+           </tr>
+       </table>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
